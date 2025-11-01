@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="descripcion para motores de busqueda">
+    <meta name="keywords" content="party, up, fiesta, app, partyapp, partyaplication, partyup">
+    <meta name="author" content="Party Up LLC">
+    <link rel="stylesheet" href="Styles.css">
+    <link rel="icon" href="MediaSources/Party App-32x32.png" type="image">
+    <title>Party App - Home</title>
+</head>
+<header class="header">
+    <nav class="nav" aria-label="Navigation Bar">
+        <button class="toggle-aside-btn" id="toggleAside">
+            <i class="fi fi-sr-menu-burger"></i>
+        </button>
+        <a href="Home.html" class="logo">
+            <img class="logo-icon" src="MediaSources/Party App-70x70.png" alt="Logo of Party Up">
+            <div class="logo-text">Party <span>App</span></div>
+        </a>
+        <form class="search-form" action="/search" method="get">
+            <div class="search-container">
+                <input 
+                    type="text"
+                    name="q"
+                    placeholder="Search..."
+                    class="search-box"
+                    aria-label="Buscar"
+                    required
+                >
+                <button type="submit" class="search-button" aria-label="Buscar">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </form>
+        <ul class="nav-links">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="About.html">About Us</a></li>
+            <li><a href="Contac.html">Contact</a></li>
+            <li><a href="Help.html">Help</a></li>
+            <!--Proximamente seccion de FAQ-->
+        </ul>
+    </nav>
+</header>
+
+<body class="body">
+    <aside>
+        <div class="aside-header">
+            <h3><i class="fas fa-party-horn"></i> Party App</h3>
+        </div>
+        
+        <nav class="aside-nav" aria-label="Navigation Sidebar">
+            <ul>
+                <li><a href="Home.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="About.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                <li><a href="Contac.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="Help.html"><i class="fas fa-question-circle"></i> Help</a></li>
+            </ul>
+        </nav>
+        
+        <div class="aside-footer">
+            <h4>Legal</h4>
+            <div class="aside-footer-links">
+                <a href="#"><i class="fas fa-angle-right"></i> Términos y Condiciones</a>
+                <a href="#"><i class="fas fa-angle-right"></i> Política de Privacidad</a>
+                <a href="#"><i class="fas fa-angle-right"></i> Cookies</a>
+            </div>
+        </div>
+    </aside>
+    <!--A partir de aqui empieza el BODY-->
+    <div>
+        <h1>Party App</h1>
+    </div>
+    <div>
+        <h3>Don't know what to do in a new city?</h3>
+        <p>"Explore everywhere with our app. find the best spots for fun & food, and don't forgettable to look at events section to see all events happening across the city!"</p>
+    </div>
+    <div>
+        <h3>Party Up recommendations</h3>
+        <p>Check for all party up recommendations, all the places evaluated by party up team. Look for the icon (Icon) when you tap on the place. All places has been evaluated for party up team traying to clasify the best, funniest and most confortable places in the city.</p>
+    </div>
+</body>
+ <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p><i class="fas fa-envelope"></i> example@partyup.com</p>
+                <p><i class="fas fa-phone"></i> 686-123-45-67</p>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Party Street, Fun City</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Social Media</h4>
+                <p>Síguenos en nuestras redes sociales:</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://tiktok.com" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="About.html">About Us</a></li>
+                    <li><a href="Contac.html">Contact</a></li>
+                    <li><a href="Help.html">Help</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>Privacy policies and terms. © 2023 PartyUp. All rights reserved.</p>
+        </div>
+    </footer>
+</html>
