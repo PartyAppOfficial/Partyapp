@@ -1,5 +1,0 @@
-User-agent: *
-Disallow: /login/
-Allow: /productos/
-Sitemap: https://partyapp.com/Sitemap.xml
-(Esto es un ejemplo)
