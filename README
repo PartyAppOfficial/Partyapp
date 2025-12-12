@@ -1,0 +1,34 @@
+# Party App — Repository Overview
+
+Important: This repository contains proprietary code. The code in this repository is licensed under the "Party App Proprietary — Restricted Modification License (2025)". See the LICENSE file in the root of this repository for the full license text.
+
+## Key points
+
+- The Software may be used internally in accordance with the LICENSE.
+- Only Authorized Personnel (individuals or entities expressly authorized in writing by Party App) may modify the Software.
+- Any modification by unauthorized persons is a material breach of the LICENSE and may result in revocation of access and legal action.
+- The LICENSE is governed by the federal laws of the United States of America and the laws of the State of Delaware, and the parties agree that the federal and state courts located in Kent County, Delaware shall have exclusive jurisdiction and venue over disputes arising under the LICENSE.
+
+## How to request modification authorization
+To request authorization to modify the code, provide the following information to Party App's authorization contact (replace the contact below with the correct address for your organization):
+- Full name and affiliation
+- Purpose for the requested modifications
+- Description of the proposed changes (files, scope, and impact)
+- Proposed timeline
+- Any relevant approvals or agreements (e.g., NDAs, contractor agreements)
+
+Contact: support@partyapp.online
+
+Party App may require written approval that explicitly lists the Authorized Personnel and the scope of permitted changes. Do not proceed with any modification until you have received that written authorization.
+
+## If you are Authorized Personnel
+- Include a clear authorization reference in commit messages (for example: "Authorized by Party App — Approval ID: <ID>").
+- Retain copies of the written authorization associated with any modifications.
+- Follow any additional internal procedures Party App requires for code changes (code review, CI, signing, etc.).
+
+## Notices and compliance
+- Unauthorized modification or distribution may lead to injunctive relief and claims for damages, including attorneys' fees.
+- This README and the LICENSE are not a substitute for legal advice. If you need certainty about enforcement or compliance, consult legal counsel.
+
+## Where to find the license
+- LICENSE — contains the full "Party App Proprietary — Restricted Modification License (2025)".
