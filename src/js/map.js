@@ -139,7 +139,7 @@ function initMap() {
       // Verificar si el usuario está autenticado
       const currentUser = auth.currentUser;
       if (!currentUser) {
-        showNotification('Debes iniciar sesión para registrar un negocio', 'error');
+        showNotification('You must log in to register a business', 'error');
         // Abrir modal de auth si está disponible
         if (window.openAuthModal) {
           window.openAuthModal('login');
@@ -169,11 +169,11 @@ function initMap() {
       const submitBtn = form.querySelector('button[type="submit"]');
       const originalText = submitBtn.textContent;
       submitBtn.disabled = true;
-      submitBtn.textContent = 'Guardando...';
+      submitBtn.textContent = 'Saving...';
 
       try {
         // Upload images and video
-        showNotification('Subiendo archivos...', 'info');
+        showNotification('Uploading files...', 'info');
         const imageUrls = await uploadImages(imageFiles);
         const videoUrl = await uploadVideo(videoFiles[0]); // Only first video
 
@@ -201,12 +201,12 @@ function initMap() {
         };
 
         // Save to Firestore
-        const docRef = await addDoc(collection(db, 'businesses'), payload);
+        const docRef = await addDoc(collection(db, 'places'), payload);
         
         console.log('Business registered successfully with ID:', docRef.id);
         
         // Show success message
-        showNotification('¡Negocio registrado exitosamente!', 'success');
+        showNotification('Business registered successfully!', 'success');
         
         // Reset form
         form.reset();
@@ -216,7 +216,7 @@ function initMap() {
 
         // Reset map
         if (marker && map) {
-          marker.setPoint(DEFAULT_LOCATION);
+          marker.setPosition(DEFAULT_LOCATION);
           map.panTo(DEFAULT_LOCATION);
           map.setZoom(14);
           updatePositionInputs(DEFAULT_LOCATION.lat, DEFAULT_LOCATION.lng);
@@ -228,7 +228,7 @@ function initMap() {
         
       } catch (error) {
         console.error('Error saving business:', error);
-        showNotification('Error al guardar. Por favor intenta de nuevo.', 'error');
+        showNotification('Error saving. Please try again.', 'error');
       } finally {
         // Restore button state
         submitBtn.disabled = false;
@@ -251,7 +251,7 @@ function setupFileValidation() {
       
       // Check number of images
       if (files.length > MAX_IMAGES) {
-        showNotification(`Solo puedes subir máximo ${MAX_IMAGES} imágenes`, 'error');
+        showNotification(`You can only upload maximum ${MAX_IMAGES} images`, 'error');
         e.target.value = ''; // Clear selection
         return;
       }
@@ -259,18 +259,17 @@ function setupFileValidation() {
       // Check image types
       const invalidImages = files.filter(f => !ALLOWED_IMAGE_TYPES.includes(f.type));
       if (invalidImages.length > 0) {
-        showNotification('Solo se permiten imágenes en formato JPEG, JPG o PNG', 'error');
+        showNotification('Only images in JPEG, JPG or PNG format are allowed.', 'error');
         e.target.value = '';
         return;
       }
 
       // Show success message
       if (files.length > 0) {
-        showNotification(`${files.length} imagen(es) seleccionada(s)`, 'success');
+        showNotification(`${files.length} image(s) selected`, 'success');
       }
     });
   }
-
   if (videoInput) {
     videoInput.addEventListener('change', (e) => {
       const file = e.target.files[0];
@@ -279,7 +278,7 @@ function setupFileValidation() {
 
       // Check video type
       if (!ALLOWED_VIDEO_TYPES.includes(file.type)) {
-        showNotification('Solo se permiten videos en formato MP4', 'error');
+        showNotification('Only MP4 format videos are allowed', 'error');
         e.target.value = '';
         return;
       }
@@ -287,14 +286,14 @@ function setupFileValidation() {
       // Check video size
       if (file.size > MAX_VIDEO_SIZE_BYTES) {
         const sizeMB = (file.size / (1024 * 1024)).toFixed(2);
-        showNotification(`El video es muy grande (${sizeMB}MB). Máximo permitido: ${MAX_VIDEO_SIZE_MB}MB`, 'error');
+        showNotification(`The video is very large (${sizeMB}MB). Maximum allowed: ${MAX_VIDEO_SIZE_MB}MB`, 'error');
         e.target.value = '';
         return;
       }
 
       // Show success message
       const sizeMB = (file.size / (1024 * 1024)).toFixed(2);
-      showNotification(`Video seleccionado (${sizeMB}MB)`, 'success');
+      showNotification(`Selected video (${sizeMB}MB)`, 'success');
     });
   }
 }
@@ -313,7 +312,7 @@ function validateFiles(images, videos) {
   if (imageArray.length > MAX_IMAGES) {
     return {
       valid: false,
-      message: `Solo puedes subir máximo ${MAX_IMAGES} imágenes. Has seleccionado ${imageArray.length}.`
+      message: `You can only upload maximum ${MAX_IMAGES} images. You have selected ${imageArray.length}.`
     };
   }
 
@@ -322,7 +321,7 @@ function validateFiles(images, videos) {
     if (!ALLOWED_IMAGE_TYPES.includes(img.type)) {
       return {
         valid: false,
-        message: `Formato de imagen no válido: ${img.name}. Solo se permiten JPEG, JPG o PNG.`
+        message: `Invalid image format: ${img.name}. Only JPEG, JPG or PNG are allowed.`
       };
     }
   }
@@ -331,7 +330,7 @@ function validateFiles(images, videos) {
   if (videoArray.length > 1) {
     return {
       valid: false,
-      message: 'Solo puedes subir 1 video.'
+      message: 'You can only upload 1 video.'
     };
   }
 
@@ -342,7 +341,7 @@ function validateFiles(images, videos) {
     if (!ALLOWED_VIDEO_TYPES.includes(video.type)) {
       return {
         valid: false,
-        message: `Formato de video no válido: ${video.name}. Solo se permiten videos MP4.`
+        message: `Invalid video format: ${video.name}. Only MP4 videos are allowed.`
       };
     }
 
@@ -350,7 +349,7 @@ function validateFiles(images, videos) {
       const sizeMB = (video.size / (1024 * 1024)).toFixed(2);
       return {
         valid: false,
-        message: `El video es muy grande (${sizeMB}MB). Máximo permitido: ${MAX_VIDEO_SIZE_MB}MB.`
+        message: `The video is very large (${sizeMB}MB). Maximum allowed: ${MAX_VIDEO_SIZE_MB}MB.`
       };
     }
   }
