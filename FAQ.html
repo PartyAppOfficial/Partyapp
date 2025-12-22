@@ -3,57 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Descripción breve.">
+    <meta name="description" content="If you have any questions, please check our frequently asked questions section.">
+    <meta name="author" content="Party App">
     <meta property="og:title" content="Party App">
-    <meta property="og:description" content="Descripción para redes sociales.">
+    <meta property="og:description" content="If you have any questions, please check our frequently asked questions section.">
     <link rel="manifest" href="manifest.json">
     <link rel="icon" href="icons/Party-App-32x32.ico" type="icon">
     <link rel="stylesheet" href="src/css/styles.css">
     <title>FAQ's</title>
 </head>
 <body>
-    <header id="Main-Header" class="header">
-      <div class="header-content">
-        <button id="asideToggle" class="aside-toggle" aria-controls="sidebar" aria-expanded="false" aria-label="Mostrar menú lateral">
-          ☰
+  <header id="Main-Header" class="header">
+    <div class="header-content">
+      <button id="asideToggle" class="aside-toggle" aria-controls="sidebar" aria-expanded="false" aria-label="Mostrar menú lateral">
+        ☰
+      </button>
+      <a href="index.html" class="logo-link">
+        <img class="Header-Logo" src="src/assets/Party App-70x70.png" alt="Logo de Party App" width="88" height="70">
+      </a>
+      <form class="search-bar" role="search" aria-label="Buscar">
+        <input type="text" placeholder="Buscar...">
+        <button type="submit" aria-label="Buscar">
+          <!-- icono de lupa svg (puedes poner la imagen si prefieres) -->
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <circle cx="9" cy="9" r="8" stroke="currentColor" stroke-width="2"/>
+            <line x1="14" y1="14" x2="19" y2="19" stroke="currentColor" stroke-width="2"/>
+          </svg>
         </button>
-        <a href="index.html" class="logo-link">
-          <img class="Header-Logo" src="src/assets/Party App-70x70.png" alt="Logo de Party App" width="88" height="70">
-        </a>
-        <form class="search-bar" role="search" aria-label="Buscar">
-          <input type="text" placeholder="Buscar...">
-          <button type="submit" aria-label="Buscar">
-            <!-- icono de lupa svg (puedes poner la imagen si prefieres) -->
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-              <circle cx="9" cy="9" r="8" stroke="currentColor" stroke-width="2"/>
-              <line x1="14" y1="14" x2="19" y2="19" stroke="currentColor" stroke-width="2"/>
-            </svg>
-          </button>
-        </form>
-        <nav class="navigation-bar" aria-label="Navegación principal">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="register.html">Register</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="FAQ.html">FAQ</a></li>
-          </ul>
-        </nav>
-        <div class="auth-container">
-          <button id="authButton" class="auth-button">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="auth-icon">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-            </svg>
-            <span class="auth-text">Login</span>
-          </button>
-        </div>
-      </div>
-    </header>
-    <aside id="sidebar" class="sidebar" aria-label="Menú lateral">
-      <header class="sidebar-header">
-        <h3>Party App</h3>
-      </header>
-      <nav class="sidebar-nav" aria-label="Navegación lateral">
+      </form>
+      <nav class="navigation-bar" aria-label="Navegación principal">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="register.html">Register</a></li>
@@ -62,157 +40,224 @@
           <li><a href="FAQ.html">FAQ</a></li>
         </ul>
       </nav>
-      <div class="sidebar-legal">
-      <small><a href="terms&conditions.html">Terms & Conditions</a> · <a href="privacypolicy.html"> privacity</a></small>
+      <div class="auth-container">
+        <button id="authButton" class="auth-button">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="auth-icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+          </svg>
+          <span class="auth-text">Login</span>
+        </button>
+      </div>
     </div>
-    </aside>
-    <div id="overlay" class="overlay" hidden></div>
-      <main>
-        <h2 class="faq-title">Frecuently Asked Questions</h2>
-        <div>
-          <div class="faq-container">
-            <h2 class="faq-subtitle">User FAQ's</h2>
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>What is Party App</h3>
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>It is a tool that provides you with information on leisure venues "Hotels, restaurants, nightclubs, etc." with the aim of facilitating this information to users and promoting all businesses of the same type that are registered in the application.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>Can I find locations in other cities?</h3>
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>Yes, party app provides information on all registered businesses around the world, allowing the user to choose which restaurant is of interest.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>Do they offer promotions or discounts for being a Party App user?</h3>
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>We do not currently provide this service; however, with the great acceptance of Party App, we expect to be able to negotiate participation in a dynamic of promotions and discounts for Party App users.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>Can reservations be made directly through the app?</h3>
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>We do not currently provide this service; however, this feature is intended for the future and to provide greater convenience to users and businesses registered on the party app.</p>
-                </div>
-            </div>
+  </header>
+  <aside id="sidebar" class="sidebar" aria-label="Menú lateral">
+    <header class="sidebar-header">
+      <h3 translate="no" lang="en">Party App</h3>
+    </header>
+    <nav class="sidebar-nav" aria-label="Navegación lateral">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="FAQ.html">FAQ</a></li>
+      </ul>
+    </nav>
+    <div class="sidebar-legal">
+    <small><a href="terms&conditions.html">Terms & Conditions</a> · <a href="privacypolicy.html"> privacity</a></small>
+  </div>
+  </aside>
+  <div id="overlay" class="overlay" hidden></div>
+    <main>
+      <h2 class="faq-title">Frecuently Asked Questions</h2>
+      <div>
+        <div class="faq-container">
+          <h2 class="faq-subtitle">User FAQ's</h2>
+          <div class="faq-item">
+              <div class="faq-question">
+                  <h3>What is Party App</h3>
+                  <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-answer">
+                  <p>It is a tool that provides you with information on leisure venues "Hotels, restaurants, nightclubs, etc." with the aim of facilitating this information to users and promoting all businesses of the same type that are registered in the application.</p>
+              </div>
           </div>
-          <div class="faq-container">
-            <h2 class="faq-subtitle">Business FAQ's</h2>
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>How can I promote my business on the app?</h3>
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>Currently, advertising for Party App is done manually, so in the contact section you must send a quote request which will be sent directly to the email address provided.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>Is there a registration fee?</h3>
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>Business registration and account creation is completely free.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>How long does registration take?</h3>
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>Business registrations are immediate once the registration form is completed; however, in case of any breach of our terms and conditions, we reserve the right to delete the registration.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>How can I find out how many users have viewed my business on the app?</h3>
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>Party App has a built-in click counter, so that every person searching for a place is counted, providing businesses with a more realistic popularity metric.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>Payment and billing methods</h3>
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>Currently, Party App does not have an automated payment system, so all payments to Party App must be made via bank transfer.<br>Account details will be provided to users who wish to contract Party App's advertising services via email.</p>
-                </div>
-            </div>
+          <div class="faq-item">
+              <div class="faq-question">
+                  <h3>Can I find locations in other cities?</h3>
+                  <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-answer">
+                  <p>Yes, party app provides information on all registered businesses around the world, allowing the user to choose which restaurant is of interest.</p>
+              </div>
+          </div>
+          <div class="faq-item">
+              <div class="faq-question">
+                  <h3>Do they offer promotions or discounts for being a Party App user?</h3>
+                  <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-answer">
+                  <p>We do not currently provide this service; however, with the great acceptance of Party App, we expect to be able to negotiate participation in a dynamic of promotions and discounts for Party App users.</p>
+              </div>
+          </div>
+          <div class="faq-item">
+              <div class="faq-question">
+                  <h3>Can reservations be made directly through the app?</h3>
+                  <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-answer">
+                  <p>We do not currently provide this service; however, this feature is intended for the future and to provide greater convenience to users and businesses registered on the party app.</p>
+              </div>
           </div>
         </div>
-      </main>
-    <footer class="footer">
-        <div class="footer__content">
-            <section class="footer__social">
-                <h4 class="footer__title">Follow our social networks</h4>
-                <ul class="footer__social-list">
-                    <li class="footer__social-item">
-                        <a href="https://facebook.com" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                            </svg>
-                            <span class="footer__social-text">Facebook</span>
-                        </a>
-                    </li>
-                    <li class="footer__social-item">
-                        <a href="https://instagram.com" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram profile">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                            </svg>
-                            <span class="footer__social-text">Instagram</span>
-                        </a>
-                    </li>
-                    <li class="footer__social-item">
-                        <a href="https://tiktok.com" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Visit our TikTok profile">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/>
-                            </svg>
-                            <span class="footer__social-text">TikTok</span>
-                        </a>
-                    </li>
-                    <li class="footer__social-item">
-                        <a href="https://x.com" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Visit our X profile">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                            </svg>
-                            <span class="footer__social-text">X</span>
-                        </a>
-                    </li>
-                    <li class="footer__social-item">
-                        <a href="https://youtube.com" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Visit our YouTube channel">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                            </svg>
-                            <span class="footer__social-text">YouTube</span>
-                        </a>
-                    </li>
-                </ul>
-            </section>
-            <div class="footer__copyright">
-                <p>&copy; <time datetime="2025">2025</time> Party App LLC. All rights reserved.</p>
-            </div>
+        <div class="faq-container">
+          <h2 class="faq-subtitle">Business FAQ's</h2>
+          <div class="faq-item">
+              <div class="faq-question">
+                  <h3>How can I promote my business on the app?</h3>
+                  <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-answer">
+                  <p>Currently, advertising for Party App is done manually, so in the contact section you must send a quote request which will be sent directly to the email address provided.</p>
+              </div>
+          </div>
+          <div class="faq-item">
+              <div class="faq-question">
+                  <h3>Is there a registration fee?</h3>
+                  <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-answer">
+                  <p>Business registration and account creation is completely free.</p>
+              </div>
+          </div>
+          <div class="faq-item">
+              <div class="faq-question">
+                  <h3>How long does registration take?</h3>
+                  <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-answer">
+                  <p>Business registrations are immediate once the registration form is completed; however, in case of any breach of our terms and conditions, we reserve the right to delete the registration.</p>
+              </div>
+          </div>
+          <div class="faq-item">
+              <div class="faq-question">
+                  <h3>How can I find out how many users have viewed my business on the app?</h3>
+                  <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-answer">
+                  <p>Party App has a built-in click counter, so that every person searching for a place is counted, providing businesses with a more realistic popularity metric.</p>
+              </div>
+          </div>
+          <div class="faq-item">
+              <div class="faq-question">
+                  <h3>Payment and billing methods</h3>
+                  <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-answer">
+                  <p>Currently, Party App does not have an automated payment system, so all payments to Party App must be made via bank transfer.<br>Account details will be provided to users who wish to contract Party App's advertising services via email.</p>
+              </div>
+          </div>
         </div>
-    </footer>
-    <script type="module" src="src/js/firebase-config.js"></script>
-    <script type="module" src="src/js/auth.js"></script>
-    <script src="src/js/main.js"></script>
+      </div>
+      <div id="authModal" class="auth-modal" style="display:none;">
+    <div class="auth-modal-content">
+      <button class="auth-modal-close" id="closeAuthModal">&times;</button>
+    <!-- TABS -->
+    <div class="auth-tabs">
+      <button class="auth-tab active" data-tab="login">Login</button>
+      <button class="auth-tab" data-tab="signup">Sign Up</button>
+    </div>
+    <!-- LOGIN FORM -->
+    <div id="loginForm" class="auth-form-container active">
+      <h2>Welcome Back</h2>
+      <form id="loginFormElement">
+        <label for="loginEmail">Email</label>
+        <input type="email" id="loginEmail" required placeholder="your@email.com">
+        <label for="loginPassword">Password</label>
+        <input type="password" id="loginPassword" required placeholder="••••••••" minlength="6">
+        <button type="submit" class="button">Login</button>    
+        <p class="auth-switch">Don't have an account?
+          <a href="#" id="switchToSignup">Sign up</a>
+        </p>
+      </form>
+    </div>
+    <!-- SIGNUP FORM -->
+    <div id="signupForm" class="auth-form-container">
+      <h2>Create Account</h2>
+      <form id="signupFormElement">
+        <label for="signupName">Full Name</label>
+        <input type="text" id="signupName" required placeholder="John Doe">
+        <label for="signupEmail">Email</label>
+        <input type="email" id="signupEmail" required placeholder="your@email.com">
+        <label for="signupPassword">Password</label>
+        <input type="password" id="signupPassword" required placeholder="••••••••" minlength="6">
+        <label for="signupPasswordConfirm">Confirm Password</label>
+        <input type="password" id="signupPasswordConfirm" required placeholder="••••••••" minlength="6">
+        <button type="submit" class="button">Sign Up</button>
+        <p class="auth-switch">
+          Already have an account? <a href="#" id="switchToLogin">Login</a>
+        </p>
+      </form>
+    </div>
+    <!-- Mensaje de error -->
+    <div id="authError" class="auth-error" style="display:none;"></div>
+    </div>
+    </div>
+    </main>
+  <footer class="footer">
+      <div class="footer__content">
+          <section class="footer__social">
+              <h4 class="footer__title">Follow our social networks</h4>
+              <ul class="footer__social-list">
+                  <li class="footer__social-item">
+                      <a href="https://facebook.com" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                          </svg>
+                          <span class="footer__social-text">Facebook</span>
+                      </a>
+                  </li>
+                  <li class="footer__social-item">
+                      <a href="https://instagram.com" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram profile">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                          </svg>
+                          <span class="footer__social-text">Instagram</span>
+                      </a>
+                  </li>
+                  <li class="footer__social-item">
+                      <a href="https://tiktok.com" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Visit our TikTok profile">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                              <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/>
+                          </svg>
+                          <span class="footer__social-text">TikTok</span>
+                      </a>
+                  </li>
+                  <li class="footer__social-item">
+                      <a href="https://x.com" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Visit our X profile">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                          </svg>
+                          <span class="footer__social-text">X</span>
+                      </a>
+                  </li>
+                  <li class="footer__social-item">
+                      <a href="https://youtube.com" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Visit our YouTube channel">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                          </svg>
+                          <span class="footer__social-text">YouTube</span>
+                      </a>
+                  </li>
+              </ul>
+          </section>
+          <div class="footer__copyright">
+              <p>&copy; <time datetime="2025">2025</time> Party App LLC. All rights reserved.</p>
+          </div>
+      </div>
+  </footer>
+  <script type="module" src="src/js/firebase-config.js"></script>
+  <script type="module" src="src/js/auth.js"></script>
+  <script src="src/js/main.js"></script>
 </body>
 </html>

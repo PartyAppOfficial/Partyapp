@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Descripción breve.">
+    <meta name="description" content="Send us a message if you have any problems or special questions and we will respond as soon as possible.">
+    <meta name="author" content="Party App">
     <meta property="og:title" content="Party App">
-    <meta property="og:description" content="Descripción para redes sociales.">
+    <meta property="og:description" content="Send us a message if you have any problems or special questions and we will respond as soon as possible.">
     <link rel="manifest" href="manifest.json">
     <link rel="icon" href="icons/Party-App-32x32.ico" type="icon">
     <link rel="stylesheet" href="src/css/styles.css">
@@ -51,7 +52,7 @@
   </header>
   <aside id="sidebar" class="sidebar" aria-label="Menú lateral">
     <header class="sidebar-header">
-      <h3>Party App</h3>
+      <h3 translate="no" lang="en">Party App</h3>
     </header>
     <nav class="sidebar-nav" aria-label="Navegación lateral">
       <ul>
@@ -63,39 +64,39 @@
       </ul>
     </nav>
     <div class="sidebar-legal">
-      <small><a href="terms.html">Terms & Conditions</a> · <a href="privacity.html"> privacity</a></small>
+      <small><a href="terms&conditions.html">Terms & Conditions</a> · <a href="privacypolicy.html"> privacity</a></small>
     </div>
   </aside>
   <div id="overlay" class="overlay" hidden></div>
   <main>
     <div class="container">
-    <h2 class="container-title">Contáctanos</h2>
-    <p class="subtitle">Envíanos un mensaje y te responderemos pronto</p>
+    <h2 class="container-title">Contact</h2>
+    <p class="subtitle">Send us a message and we'll get back to you soon.</p>
     <div class="message success-message" id="successMessage">
-        ¡Mensaje enviado con éxito! Te responderemos pronto.
+        Message sent successfully! We'll get back to you soon.
     </div>
     <div class="message error-message" id="errorMessage">
-        Hubo un error al enviar el mensaje. Por favor intenta de nuevo.
+        There was an error sending the message. Please try again.
     </div>
     <form id="contactForm">
         <div class="form-group">
-            <label for="name">Nombre completo *</label>
-            <input type="text" id="name" name="from_name" required>
+            <label for="name">Full name *</label>
+            <input type="text" id="name" name="from_name" required placeholder="Your full name...">
         </div>
         <div class="form-group">
-            <label for="email">Correo electrónico *</label>
-            <input type="email" id="email" name="reply_to" required>
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="reply_to" required placeholder="email@example.com">
         </div>
         <div class="form-group">
-            <label for="subject">Asunto *</label>
+            <label for="subject">Subject *</label>
             <input type="text" id="subject" name="subject" required>
         </div>
         <div class="form-group">
-            <label for="message">Mensaje *</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Place your message here..."></textarea>
         </div>
         <button type="submit" class="form_button" id="submitBtn">
-            <span id="btnText">Enviar mensaje</span>
+            <span id="btnText">Send message</span>
         </button>
     </form>
     </div>
