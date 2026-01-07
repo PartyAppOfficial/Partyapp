@@ -107,7 +107,7 @@ function initMap() {
 
   // If user types a manual address and blurs the field, geocode it
   addressInput.addEventListener('blur', () => {
-    const val = addressInput.value && addressInput.value.trim();
+    const val = addressInput.value?.trim();
     if (!val) return;
     setTimeout(() => {
       if (document.getElementById('formatted_address').value === val) return;
@@ -188,8 +188,8 @@ function initMap() {
           phone: fd.get('phone'),
           address: fd.get('address'),
           formatted_address: fd.get('formatted_address'),
-          latitude: parseFloat(fd.get('latitude')),
-          longitude: parseFloat(fd.get('longitude')),
+          latitude: Number.parseFloat(fd.get('latitude')),
+          longitude: Number.parseFloat(fd.get('longitude')),
           description: fd.get('description'),
           website: fd.get('website'),
           images: imageUrls,
@@ -365,6 +365,9 @@ function validateFiles(images, videos) {
 async function uploadImages(files) {
   if (!files || files.length === 0) return [];
   
+  const currentUser = auth.currentUser;
+  if (!currentUser) throw new Error ('Usuario no autenticado');
+
   const uploadPromises = [];
   const fileArray = Array.from(files);
   
@@ -375,7 +378,7 @@ async function uploadImages(files) {
     const fileName = `${timestamp}_${randomStr}_${file.name}`;
     
     // Create storage reference
-    const storageRef = ref(storage, `business-images/${fileName}`);
+    const storageRef = ref(storage, `business-images/${currentUser.uid}/${fileName}`);
     
     // Upload file and get URL
     const uploadPromise = uploadBytes(storageRef, file)
@@ -410,7 +413,7 @@ async function uploadVideo(file) {
     const fileName = `${timestamp}_${randomStr}_${file.name}`;
     
     // Create storage reference
-    const storageRef = ref(storage, `business-videos/${fileName}`);
+    const storageRef = ref(storage, `business-videos/${currentUser.uid}/${fileName}`);
     
     // Upload file and get URL
     const snapshot = await uploadBytes(storageRef, file);
@@ -479,7 +482,7 @@ function updatePositionInputs(lat, lng) {
 function reverseGeocodeAndFill(lat, lng) {
   if (!geocoder) return;
   geocoder.geocode({ location: { lat: Number(lat), lng: Number(lng) } }, (results, status) => {
-    if (status === 'OK' && results && results[0]) {
+    if (status === 'OK' && results?.[0]) {
       const best = results[0];
       const addrInput = document.getElementById('address');
       if (addrInput) addrInput.value = best.formatted_address;
@@ -497,7 +500,7 @@ function reverseGeocodeAndFill(lat, lng) {
 function geocodeAddress(address) {
   if (!geocoder) return;
   geocoder.geocode({ address }, (results, status) => {
-    if (status === 'OK' && results && results[0] && results[0].geometry && results[0].geometry.location) {
+    if (status === 'OK' && results?.[0]?.geometry?.location) {
       const loc = results[0].geometry.location;
       map.panTo(loc);
       map.setZoom(16);
@@ -543,7 +546,7 @@ window.initMap = initMap;
 // AGREGAR: Cargar Google Maps dinámicamente
 function loadGoogleMaps() {
   // Verifica si ya está cargado
-  if (window.google && window.google.maps) {
+  if (window.google?.maps) {
     initMap();
     return;
   }
