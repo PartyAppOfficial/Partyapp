@@ -145,6 +145,56 @@ document.addEventListener('DOMContentLoaded', function() {
   setInterval(() => { nextBtn.click(); }, 5000);
 });
 
+//=============================================
+//                Subcategoria
+//=============================================
+document.addEventListener('DOMContentLoaded', function() {
+  const businessType = document.getElementById('businessType');
+  const subCategoryContainer = document.getElementById('subCategoryContainer');
+  const subCategory = document.getElementById('subCategory');
+  
+  // Ocultar inicialmente
+  subCategoryContainer.style.display = 'none';
+  subCategory.required = false;
+  
+  businessType.addEventListener('change', function() {
+    if (this.value === 'restaurant') {
+      // Mostrar con animación
+      subCategoryContainer.style.display = 'block';
+      subCategory.required = true;
+      
+      // Forzar reflow para que la animación funcione
+      void subCategoryContainer.offsetWidth;
+      
+      // Añadir clase para animación
+      setTimeout(() => {
+        subCategoryContainer.classList.add('visible');
+      }, 10);
+    } else {
+      // Ocultar con animación
+      subCategoryContainer.classList.remove('visible');
+      subCategory.required = false;
+      
+      // Ocultar completamente después de la animación
+      setTimeout(() => {
+        subCategoryContainer.style.display = 'none';
+        subCategory.value = '';
+      }, 400);
+    }
+  });
+  
+  // También manejar cuando el formulario se envíe
+  const form = businessType.closest('form');
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      if (businessType.value === 'restaurant' && !subCategory.value) {
+        e.preventDefault();
+        alert('Por favor selecciona un tipo de restaurante');
+        subCategory.focus();
+      }
+    });
+  }
+});
 
 //=============================================
 //                    FAQ
