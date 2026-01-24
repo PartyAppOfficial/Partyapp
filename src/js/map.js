@@ -183,11 +183,11 @@ function initMap() {
         const payload = {
           businessName: fd.get('businessName'),
           businessType: fd.get('businessType'),
+          restaurantType: fd.get('subCategory'),
           ownerName: fd.get('ownerName'),
           email: fd.get('email'),
           phone: fd.get('phone'),
           address: fd.get('address'),
-          formatted_address: fd.get('formatted_address'),
           latitude: Number.parseFloat(fd.get('latitude')),
           longitude: Number.parseFloat(fd.get('longitude')),
           description: fd.get('description'),
