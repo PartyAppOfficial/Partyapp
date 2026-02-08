@@ -127,6 +127,30 @@ function initMap() {
     });
   }
 
+  const businessNameInput = document.getElementById('businessName');
+    
+    if (businessNameInput) {
+        // Crear campo oculto dinámicamente
+        const hiddenInput = document.createElement('input');
+        hiddenInput.type = 'hidden';
+        hiddenInput.id = 'businessNameSearch';
+        hiddenInput.name = 'businessNameSearch';
+        hiddenInput.value = businessNameInput.value.toLowerCase; // Inicializar con valor actual
+        
+        // Insertar después del campo visible
+        businessNameInput.parentNode.insertBefore(hiddenInput, businessNameInput.nextSibling);
+        
+        // Sincronizar valores cuando el usuario escribe
+        businessNameInput.addEventListener('input', function() {
+            hiddenInput.value = this.value.toLowerCase();
+        });
+        
+        // También sincronizar si el valor cambia por otros medios
+        businessNameInput.addEventListener('change', function() {
+            hiddenInput.value = this.value.toLowerCase();
+        });
+    }
+
   // Setup file input validation
   setupFileValidation();
 
@@ -182,6 +206,7 @@ function initMap() {
         // Prepare payload
         const payload = {
           businessName: fd.get('businessName'),
+          businessNameSearch: fd.get('businessNameSearch'),
           businessType: fd.get('businessType'),
           restaurantType: fd.get('subCategory'),
           ownerName: fd.get('ownerName'),
